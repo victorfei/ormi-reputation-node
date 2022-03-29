@@ -3,6 +3,7 @@
     "module": "esnext",
     "target": "es6",
     "rootDir": "./",
+    "outDir": "dist",
     "esModuleInterop": true
   }
 }

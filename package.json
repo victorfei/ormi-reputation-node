@@ -2,11 +2,16 @@
   "name": "ormi-reputation-node",
   "version": "1.0.0",
   "description": "server node running express.js for fetching account reputation/credit data",
-  "main": "app.ts",
+  "main": "dist/app.js",
   "type": "module",
   "scripts": {
-    "start": "node --loader ts-node/esm app.ts"
-  },
+    "start": "node dist/app.js",
+    "build": "tsc",
+    "postinstall": "tsc",
+    "watch-node": "nodemon dist/app.js",
+    "watch-ts": "tsc -w",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master"
+},
   "author": "Ormi Finance",
   "license": "MIT",
   "devDependencies": {
